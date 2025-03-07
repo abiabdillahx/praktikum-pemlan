@@ -7,7 +7,7 @@
 
 ## Hasil Analisa dan Dokumentasi
 1. Membuat interaksi dengan user agar bisa memasukkan data
-
+</br>
 2. Menambahkan method `setWaktu` pada class Mobil yang berparameter _double_ 
 User harus memberikan input dalam satuan jam
 ```java
@@ -16,6 +16,7 @@ User harus memberikan input dalam satuan jam
         waktu = ubahSekon(d);
     }
 ```
+</br>
 
 3. Menambahkan method `ubahSekon`untuk mengubah satuan waktu dari jam menjadi detik
 > - Method ini hanya boleh dipanggil dari class Mobil, yang artinya saya beri enkapsulasi **private** sehingga User tidak bisa mengubah satuan waktu secara langsung dari luar class Mobil
@@ -27,6 +28,7 @@ User harus memberikan input dalam satuan jam
         return d * 3600;
     }
 ```
+</br>
 
 4. Menambahkan method `ubahKecepatan` untuk mengubah satuan kecepatan dari km/h menjadi m/s
 > - Method ini hanya boleh dipanggil dari class Mobil, yang artinya saya beri enkapsulasi **private** sehingga User tidak bisa mengubah satuan kecepatan secara langsung dari luar class Mobil
@@ -39,14 +41,16 @@ User harus memberikan input dalam satuan jam
     }
 ```
 
+</br>
 5. Menambahkan method `hitungJarak` yang berfungsi untuk menghitung jarak yang ditempuh oleh mobil dalam satuan meter
 ```java
     // Menambah method hitungJarak yang mengembalikan jarak yang ditempuh mobil dalam satuan m (no 7)
     public double hitungJarak(double waktu, double kecepatan){
         return (waktu * kecepatan);
-        
     }
 ```
+
+</br>
 
 6. Menambahkan output pada method `displayMessage`, yaitu jarak tempuh mobil yang dikonversi  menjadi satuan km dari meter.
 ```java
@@ -63,3 +67,4 @@ User harus memberikan input dalam satuan jam
 
 
 ## Output dari kode
+

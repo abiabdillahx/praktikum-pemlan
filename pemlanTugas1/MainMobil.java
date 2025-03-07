@@ -43,7 +43,7 @@ public class MainMobil {
         // m2.displayMessage();
         // System.out.println("=====================");
 
-        // // meribah warna objek m1
+        // // merubah warna objek m1
         // System.out.println("Mobil pada objek m1 diubah menjadi warna hijau");
         // m1.setWarna("Hijau");
         // m1.displayMessage();
