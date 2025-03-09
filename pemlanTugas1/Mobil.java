@@ -45,7 +45,7 @@ public class Mobil {
         System.out.printf("=> Mobil anda bermerek %s ", manufaktur);
         System.out.printf("dengan nomor plat %s ", noPlat);
         System.out.printf("serta memiliki warna %s ", warna);
-        System.out.printf("mampu menempuh kecepatan %.1f km/h ", kecepatan);
+        System.out.printf("mampu menempuh kecepatan %.1f m/s ", kecepatan);
         System.out.printf("dalam waktu %.2f detik %n %n", waktu);
         // Menambahkan output jarak tempuh mobil dalam satuan km (no 8)
         System.out.printf("=> Jarak yang ditempuh mobil anda adalah %.2f km", hitungJarak(waktu, kecepatan)/1000);
