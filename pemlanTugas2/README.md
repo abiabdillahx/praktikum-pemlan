@@ -29,3 +29,22 @@ annaLama.displayMessage();
 
 **2. Menambahkan Constructor pada class Student dengan parameter nilai mata pelajaran**
 > - Pada percobaan ini, saya menambahkan constructor pada class Student dengan parameter nilai mata pelajaran (math, english, and science)
+> - Jika menginstansiasi objek melalui constructor ini, maka harus set nama, alamat, dan umur secara manual dengan **setter**.
+```java
+// menambahkan constructor dengan parameter maisng2 nilai mata pelajaran (no 2)
+    public Student(double math, double english, double science){
+        mathGrade = math;
+        englishGrade = english;
+        scienceGrade = science;
+    }
+```
+Contoh penggunaan objeknya :
+```java
+    Student budi = new Student(90, 70, 80);
+    budi.setNama("Budi");
+    budi.setAlamat("Bali");
+    budi.setUmur(20);
+```
+
+**3. Menambahkan method boolean yang pada Student untuk mengecek status kelulusan siswa**
+> - Method ini bekerja dengan mengecek nilai rata-rata yang dimiliki tiap siswa berdasarkan method **getAverage()**.
