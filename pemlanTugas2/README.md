@@ -46,5 +46,40 @@ Contoh penggunaan objeknya :
     budi.setUmur(20);
 ```
 
-**3. Menambahkan method boolean yang pada Student untuk mengecek status kelulusan siswa**
+**3. Menambahkan method boolean statusAkhir() yang pada Student untuk mengecek status kelulusan siswa**
 > - Method ini bekerja dengan mengecek nilai rata-rata yang dimiliki tiap siswa berdasarkan method **getAverage()**.
+> - Jika nilai rata2 siswa kurang dari atau sama dengan 60, maka status akhirnya _"Tidak Lulus"_
+```java
+    public double getAverage(){
+        average = (mathGrade + englishGrade + scienceGrade)/3;
+        return average;
+    }
+    // Menambahkan method yang berfungsi sebagai penentu kelulusan siswa berdasarkan average
+    public boolean statusAkhir(double avg){
+        avg = getAverage();
+        return avg >= 61;
+    }
+    // mengecek apakah nilai getAverage true atau false ( no 3)
+    System.out.println("- Status: " + (statusAkhir(getAverage()) ? "Lulus" : "Tidak Lulus")); 
+
+```
+
+**4. Membuat fitur user dapat berinteraksi dan membuat objek baru**
+> - 
+
+```java
+```
+
+**5. Menghitung jumlah objek yang telah dibuat**
+> - Method ini berada di class Student dan berfungsi untuk menghitung jumlah objek yang telah dibuat dengan menggunakan static variable **jumlahObj**.
+> - Setiap kali objek dibuat, maka constructor akan menjalankan increment pada variable **jumlahObj**.
+```java
+// Menghitung jumlah objek yang dibuat dengan return type void. (no 5)
+public static void jumlahObjek(){
+    // jumlah objek dihitung dengan menambahkan kode `jumlah++;` pada tiap constructor
+    System.out.println("Jumlah objek yang dibuat: " + jumlahObj);
+}
+```
+
+## Output dari kode
+[gambar output]

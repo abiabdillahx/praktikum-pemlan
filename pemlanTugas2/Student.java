@@ -8,20 +8,20 @@ public class Student{
     private double englishGrade;
     private double scienceGrade;
     private double average;
-    public static int jumlah;
+    public static int jumlahObj;
 
     public Student(){
         name = "";
         address = "";
         age = 0;
-        jumlah++;
+        jumlahObj++;
     }
     
     public Student(String n, String a, int ag){
         name = n;
         address = a;
         age = ag;
-        jumlah++;
+        jumlahObj++;
     }
     
     // menambahkan constructor dengan parameter maisng2 nilai mata pelajaran (no 2)
@@ -29,7 +29,7 @@ public class Student{
         mathGrade = math;
         englishGrade = english;
         scienceGrade = science;
-        jumlah++;
+        jumlahObj++;
     }
 
     public void  setName(String n){
@@ -66,7 +66,6 @@ public class Student{
         average = (mathGrade + englishGrade + scienceGrade)/3;
         return average;
     }
-
     // Menambahkan method yang berfungsi sebagai penentu kelulusan siswa berdasarkan rata2 nilai (no 3)
     public boolean statusAkhir(double avg){
         avg = getAverage();
@@ -77,7 +76,7 @@ public class Student{
     // Menghitung jumlah objek yang dibuat dengan return type void. (no 5)
     public static void jumlahObjek(){
         // jumlah objek dihitung dengan menambahkan kode `jumlah++;` pada tiap constructor
-        System.out.println("Jumlah objek yang dibuat: " + jumlah);
+        System.out.println("Jumlah objek yang dibuat: " + jumlahObj);
     }
     
     public void displayMessage(){
