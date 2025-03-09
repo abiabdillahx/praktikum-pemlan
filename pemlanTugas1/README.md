@@ -1,4 +1,4 @@
-﻿## Tugas Praktikum Pemlan 1 : Class dan Object
+﻿# Tugas 1 : Class dan Object
 > Muhammad Abi Abdillah
 
 **code:**
@@ -10,8 +10,8 @@
 
 </br>
 
-**2. Menambahkan method `setWaktu` pada class Mobil yang berparameter _double_ 
-User harus memberikan input dalam satuan jam**
+**2. Menambahkan method `setWaktu` pada class Mobil yang berparameter _double_**
+**User harus memberikan input dalam satuan jam**
 ```java
     // Menambahkan method setWaktu dalam parameter double (no 4)
     public void setWaktu(double d){
