@@ -84,7 +84,6 @@ public class Student{
         System.out.printf("yang beralamat di %s ", address);
         System.out.printf("dan berumur %d tahun ", age);
         System.out.printf("memiliki nilai rata-rata %.2f ", getAverage());
-        System.out.println("- Status: " + (statusAkhir(getAverage()) ? "Lulus" : "Tidak Lulus")); // mengecek apakah nilai getAverage true atau false ( no 3)
-        // jumlahObjek(); /* memberikan output jumlah objek yang telah dibuat setiap displayMessage (no 5)
+        System.out.println("- Status: " + (statusAkhir(getAverage()) ? "Lulus" : "Remidi")); // mengecek apakah nilai getAverage true atau false ( no 3)
     }
 }
