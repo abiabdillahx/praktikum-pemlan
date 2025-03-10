@@ -10,6 +10,10 @@ package pemlanTugas2;
 import java.util.Scanner;
 
 public class MainStudent {
+    static int jumlahMurid;
+    static Student[] murid;
+    static String[] namaMurid;
+
     public static void main(String[] args) {
         // kode sebelum dimodifikasi
         Student anna = new Student();
@@ -45,17 +49,44 @@ public class MainStudent {
 
 
         // kode modifikasi saya
-
+        // Interaktivitas dengan user sehingga bisa menginput murid sesuai yang diinginkan menggunakan array (no 4)
         System.out.println("\n~ Data Murid ~");
         System.out.println("=======================================================");
         Scanner sc = new Scanner(System.in);
+        int pilihan;
+        do { 
+            System.out.println("...............");
+            System.out.println("1. Tambahkan Data Murid\n2. Tambahkan Nilai Murid\n3. Keluar");
+            System.out.print("Pilih Menu : ");
+            pilihan = sc.nextInt();
+            if (pilihan == 1){
+                tambahMurid();
+                System.out.println("-----");
+            }else if(pilihan == 2){
+                if (murid == null){
+                    System.out.println("## Tidak ada data murid yang dapat ditambahkan nilai ##");
+                }else{
+                    tambahNilai(murid, jumlahMurid, namaMurid);
+                    break;
+                }
+            }
+        } while (pilihan == 1 || pilihan == 2);
+        for (int i = 0; i < jumlahMurid; i++) {
+            murid[i].displayMessage();
+        }
+        sc.close();
 
-        // Interaktivitas dengan user sehingga bisa menginput murid sesuai yang diinginkan menggunakan array (no 4)
+
+    }
+    // Menambah data murid (nama, alamat, usia)
+    public static void tambahMurid(){
+        Scanner scan = new Scanner(System.in);
         System.out.print("Berapa jumlah murid : ");
-        int jumlahMurid = sc.nextInt();
-        Student[] murid = new Student[jumlahMurid];
+        jumlahMurid = scan.nextInt();
+        scan.nextLine();
+        murid = new Student[jumlahMurid];
         
-        String[] namaMurid = new String[jumlahMurid];
+        namaMurid = new String[jumlahMurid];
         String[] alamatMurid = new String[jumlahMurid];
         int[] usiaMurid = new int[jumlahMurid];
         
@@ -63,29 +94,35 @@ public class MainStudent {
             
             System.out.println("-----");
             System.out.print("Nama Murid ke-" + (i+1) + " : ");
-            namaMurid[i] = sc.next();
+            namaMurid[i] = scan.next();
             System.out.print("Alamat Murid ke-" + (i+1) + " : ");
-            alamatMurid[i] = sc.next();
+            alamatMurid[i] = scan.next();
             System.out.print("Usia Murid ke-" + (i+1) + " : ");
-            usiaMurid[i] = sc.nextInt();
+            usiaMurid[i] = scan.nextInt();
+            scan.nextLine();
+
             murid[i] = new Student(namaMurid[i], alamatMurid[i], usiaMurid[i]);
         }
-        //Student.jumlahObjek(); // melihat jumlah objek yang dibuat
-
+        // scan.close();
+        Student.jumlahObjek(); // melihat jumlah objek yang dibuat
+    }
+    // menambah data nilai murid
+    public static void tambahNilai(Student[] murid, int jumlahMurid, String namaMurid[]){
+        Scanner sc = new Scanner(System.in);
         System.out.println("\n== Nilai Matematika, IPA, dan Bahasa Indonesia masing-masing murid ==");
         for (int i = 0; i < jumlahMurid; i++) {
             System.out.printf("Nilai matematika %s : ", namaMurid[i]);
             double nilaiMath = sc.nextDouble();
-            murid[i].setMath(nilaiMath);
             System.out.printf("Nilai science %s : ", namaMurid[i]);
             double nilaiScience = sc.nextDouble();
-            murid[i].setScience(nilaiScience);
             System.out.printf("Nilai english %s : ", namaMurid[i]);
             double nilaiEnglish = sc.nextDouble();
-            murid[i].setEnglish(nilaiEnglish);
+            System.out.println("-----");
 
+            murid[i].setMath(nilaiMath);
+            murid[i].setScience(nilaiScience);
+            murid[i].setEnglish(nilaiEnglish);
         }
-        murid[0].displayMessage();
-        
+        sc.close();
     }
 }
