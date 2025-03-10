@@ -6,11 +6,12 @@
 2. [Mobil.java](Mobil.java)
 
 ## Hasil Analisa dan Dokumentasi
-**1. Membuat interaksi dengan user agar bisa memasukkan data**
+### 1. Membuat interaksi dengan user agar bisa memasukkan data
+> - Menggunakan Scanner sebagai input dari user
 
 </br>
 
-**2. Menambahkan method `setWaktu` pada class Mobil yang berparameter _double_**
+### 2. Menambahkan method `setWaktu` pada class Mobil yang berparameter _double_
 **User harus memberikan input dalam satuan jam**
 ```java
     // Menambahkan method setWaktu dalam parameter double (no 4)
@@ -20,7 +21,7 @@
 ```
 </br>
 
-**3. Menambahkan method `ubahSekon`untuk mengubah satuan waktu dari jam menjadi detik**
+### 3. Menambahkan method `ubahSekon`untuk mengubah satuan waktu dari jam menjadi detik
 > - Method ini hanya boleh dipanggil dari class Mobil, yang artinya saya beri enkapsulasi **private** sehingga User tidak bisa mengubah satuan waktu secara langsung dari luar class Mobil
 > - Method ini dipanggil pada method **setWaktu** dengan nilai parameter yang sama
 
@@ -32,7 +33,7 @@
 ```
 </br>
 
-**4. Menambahkan method `ubahKecepatan` untuk mengubah satuan kecepatan dari km/h menjadi m/s**
+### 4. Menambahkan method `ubahKecepatan` untuk mengubah satuan kecepatan dari km/h menjadi m/s
 > - Method ini hanya boleh dipanggil dari class Mobil, yang artinya saya beri enkapsulasi **private** sehingga User tidak bisa mengubah satuan kecepatan secara langsung dari luar class Mobil
 > - Dipanggil pada method **setKecepatan** dengan nilai parameter yang sama
 
@@ -45,7 +46,7 @@
 
 </br>
 
-**5. Menambahkan method `hitungJarak` yang berfungsi untuk menghitung jarak yang ditempuh oleh mobil dalam satuan meter**
+### 5. Menambahkan method `hitungJarak` yang berfungsi untuk menghitung jarak yang ditempuh oleh mobil dalam satuan meter
 ```java
     // Menambah method hitungJarak yang mengembalikan jarak yang ditempuh mobil dalam satuan m (no 7)
     public double hitungJarak(double waktu, double kecepatan){
@@ -55,7 +56,7 @@
 
 </br>
 
-**6. Menambahkan output pada method `displayMessage`, yaitu jarak tempuh mobil yang dikonversi  menjadi satuan km dari meter.**
+### 6. Menambahkan output pada method `displayMessage`, yaitu jarak tempuh mobil yang dikonversi  menjadi satuan km dari meter
 ```java
     public void displayMessage(){
         System.out.println("Mobil anda bermerek " + manufaktur);

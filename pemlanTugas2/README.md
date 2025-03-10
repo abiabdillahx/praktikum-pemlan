@@ -7,7 +7,7 @@
 
 
 ## Hasil Analisa dan Dokumentasi
-**1. Percobaan Constructor sebelum dimodifikasi**
+### 1. Percobaan Constructor sebelum dimodifikasi
 Ternyata ketika objek yang sudah dideklarasikan diubah dengan instansiasi yang baru, maka akan terhitung sebagai referensi baru karena tidak ada objek yang menunjuk ke referensi lama. Yaitu pada bagian ini
 ```java
 // siswa dengan nama anna diubah alamat dan umurnya melalui constructor
@@ -27,7 +27,7 @@ annaLama.displayMessage();
 
 </br>
 
-**2. Menambahkan Constructor pada class Student dengan parameter nilai mata pelajaran**
+### 2. Menambahkan Constructor pada class Student dengan parameter nilai mata pelajaran
 > - Pada percobaan ini, saya menambahkan constructor pada class Student dengan parameter nilai mata pelajaran (math, english, and science)
 > - Jika menginstansiasi objek melalui constructor ini, maka harus set nama, alamat, dan umur secara manual dengan **setter**.
 ```java
@@ -46,7 +46,7 @@ Contoh penggunaan objeknya :
     budi.setUmur(20);
 ```
 
-**3. Menambahkan method boolean statusAkhir() yang pada Student untuk mengecek status kelulusan siswa**
+### 3. Menambahkan method boolean statusAkhir() yang pada Student untuk mengecek status kelulusan siswa
 > - Method ini bekerja dengan mengecek nilai rata-rata yang dimiliki tiap siswa berdasarkan method **getAverage()**.
 > - Jika nilai rata2 siswa kurang dari atau sama dengan 60, maka status akhirnya _"Tidak Lulus"_
 ```java
@@ -64,7 +64,7 @@ Contoh penggunaan objeknya :
 
 ```
 
-**4. Membuat fitur user dapat berinteraksi dan membuat objek baru**
+### 4. Membuat fitur user dapat berinteraksi dan membuat objek baru
 > - Tahap awal, saya membuat fitur interaksi user hanya dengan input biasa
 > - Selanjutnya, saya tambahkan fitur menu yang memungkinkan user untuk memilih menu yang diinginkan (menambah data siswa atau menambah nilai)
 
@@ -74,7 +74,7 @@ Yang diubah :
 3. Versi ini agak kompleks, untuk versi yang tanpa **menu** ada di [link ini](https://github.com/abiabdillahx/praktikum-pemlan/blob/24f2b1b6bcbff3c218f67879f9d9a3907cea3021/pemlanTugas2/MainStudent.java) (MainStudent.java sebelumnya).
 
 
-**5. Menghitung jumlah objek yang telah dibuat**
+### 5. Menghitung jumlah objek yang telah dibuat
 > - Method ini berada di class Student dan berfungsi untuk menghitung jumlah objek yang telah dibuat dengan menggunakan static variable **jumlahObj**.
 > - Setiap kali objek dibuat, maka constructor akan menjalankan increment pada variable **jumlahObj**.
 ```java
@@ -86,13 +86,13 @@ public static void jumlahObjek(){
 ```
 
 ## Output dari kode
-1. Output kode dari modul
+### 1. Output kode dari modul
 ![image](https://github.com/user-attachments/assets/51eade65-b26b-4b55-bbd5-975531dcf425)
 > - Terdapat 3 objek dengan 3 constructor yang berbeda (Anna, Chris, null)
 > - Siswa yang dibuat melalui constructor dengan parameter nilai pelajaran tidak memliki nama (null), alamat dan usia karena belum di-set melalui **setter**
 > - 2 Objek berikutnya adalah contoh pengubahan data2 pada siswa Anna.
 
-2. Output kode yang dimodifikaasi
+### 2. Output kode yang dimodifikaasi
 ![image](https://github.com/user-attachments/assets/eeef8cce-2229-4ec4-b395-ce39ac8bffa9)
 > - User dapat memilih menu
 > - Membuat 2 objek Siswa (Abi dan Abdillah)
