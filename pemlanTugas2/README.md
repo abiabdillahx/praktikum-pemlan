@@ -65,10 +65,14 @@ Contoh penggunaan objeknya :
 ```
 
 **4. Membuat fitur user dapat berinteraksi dan membuat objek baru**
-> - [Masih dalam development]
+> - Tahap awal, saya membuat fitur interaksi user hanya dengan input biasa
+> - Selanjutnya, saya tambahkan fitur menu yang memungkinkan user untuk memilih menu yang diinginkan (menambah data siswa atau menambah nilai)
 
-```java
-```
+Yang diubah :
+1. Menu tambah data siswa dipisah ke function tambahMurid()
+2. Menu tambah nilai siswa dipisah ke function tambahNilai()
+3. Versi ini agak kompleks, untuk versi yang tanpa **menu** ada di [link ini](https://github.com/abiabdillahx/praktikum-pemlan/blob/24f2b1b6bcbff3c218f67879f9d9a3907cea3021/pemlanTugas2/MainStudent.java) (MainStudent.java sebelumnya).
+
 
 **5. Menghitung jumlah objek yang telah dibuat**
 > - Method ini berada di class Student dan berfungsi untuk menghitung jumlah objek yang telah dibuat dengan menggunakan static variable **jumlahObj**.
