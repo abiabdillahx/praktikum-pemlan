@@ -86,4 +86,15 @@ public static void jumlahObjek(){
 ```
 
 ## Output dari kode
-[gambar output]
+1. Output kode dari modul
+![image](https://github.com/user-attachments/assets/51eade65-b26b-4b55-bbd5-975531dcf425)
+> - Terdapat 3 objek dengan 3 constructor yang berbeda (Anna, Chris, null)
+> - Siswa yang dibuat melalui constructor dengan parameter nilai pelajaran tidak memliki nama (null), alamat dan usia karena belum di-set melalui **setter**
+> - 2 Objek berikutnya adalah contoh pengubahan data2 pada siswa Anna.
+
+2. Output kode yang dimodifikaasi
+![image](https://github.com/user-attachments/assets/eeef8cce-2229-4ec4-b395-ce39ac8bffa9)
+> - User dapat memilih menu
+> - Membuat 2 objek Siswa (Abi dan Abdillah)
+> - Menambahkan nilai mata pelajaran keduanya
+> - Jika user memilih menu 2 tanpa menambahkan data siswa, maka akan terdapat peringatan _"Tidak ada Data murid yang dapat ditambahkan nilai"_.
