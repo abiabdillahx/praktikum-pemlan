@@ -8,10 +8,11 @@ public class Main {
         Buku[] dataBuku = new Buku[200];
         
         int pilih;
+        System.out.println("=============================");
+        System.out.println("Welcome to Library System!!!");
         do { 
             /* Menu */
             System.out.println("=============================");
-            System.out.println("Sistem Perpustakaan");
             System.out.println("1. Tambah Buku\n2. Tampilkan Daftar Buku\n3. Keluar");
             System.out.print("Pilih Menu : ");
             pilih = sc.nextInt();
@@ -19,34 +20,60 @@ public class Main {
             /* Input user interaktif */
             switch (pilih) {
                 case 1:
-                System.out.print("Masukkan Judul Buku: ");
-                String judul = sc.nextLine();
-                System.out.print("Masukkan nama Penulis: ");
-                String penulis = sc.nextLine();
-                System.out.print("Masukkan Tahun Terbit: ");
-                int tahun = sc.nextInt();
-                sc.nextLine();
+                    System.out.println("> Berapa banyak buku yang ingin ditambahkan?");
+                    int banyakBuku = sc.nextInt();
+                    sc.nextLine();
+                    if(banyakBuku <= 0){
+                        System.out.println("> Maaf, jumlah buku tidak boleh 0 atau kurang.");
+                        continue;
+                    }
+                    for (int i = 0; i < banyakBuku; i++) {
+                        System.out.print("Masukkan Judul Buku: ");
+                        String judul = sc.nextLine();
+                        System.out.print("Masukkan nama Penulis: ");
+                        String penulis = sc.nextLine();
+                        System.out.print("Masukkan Tahun Terbit: ");
+                        int tahun = sc.nextInt();
+                        sc.nextLine();
+                        // Membuat objek baru dari input user dan dimasukkan ke
+                        Buku bukuBaru = new Buku(judul, penulis, tahun);
+                        dataBuku[Buku.getJumlah()-1] = bukuBaru;
 
-                // Membuat objek baru dari input user dan dimasukkan ke
-                Buku bukuBaru = new Buku(judul, penulis, tahun);
-                dataBuku[Buku.getJumlah()-1] = bukuBaru;
-                System.out.println(dataBuku[0].getJudul());
-                try (BufferedWriter writer = new BufferedWriter(new FileWriter("pemlanTugas3/dataBuku.txt", true))) {
-                    writer.write(bukuBaru.tambahData(bukuBaru));
-                }
-                catch (Exception e) {
-                    e.printStackTrace();
-                    System.out.println("Error: " + e.getMessage());
-                }
-                System.out.println("Buku berhasil ditambahkan!");
+                        try (BufferedWriter writer = new BufferedWriter(new FileWriter("pemlanTugas3/dataBuku.txt", true))) {
+                            writer.write(bukuBaru.infoBuku(bukuBaru));
+                            writer.close();
+                        } catch (Exception e) { 
+                            System.out.println("Error: " + e.getMessage());
+                        }
+                        System.out.println("Buku berhasil ditambahkan!");
+                    }
+
                 break;
                 case 2:
-                    System.out.println("1. Info Singkat\n2. Info Lengkap");
-                    System.out.print("Pilih Menu : ");
-                    int pilih2 = sc.nextInt();
-                    if (pilih2 == 1){
-                        // Buku.displayInfo();
+                    System.out.println("\n1. Info Singkat\n2. Info Lengkap");
+                    System.out.print("Pilih Versi Info: ");
+                    int tampil = sc.nextInt();
+                    switch (tampil) {
+                        case 1: // MENAMPILKAN INFO SINGKAT
+                            Buku.infoBuku();
+                            break;
+                        case 2: // MENAMPILKAN INFO LENGKAP
+                            System.out.println("\nJudul Buku: Penulis,Tahun Terbit");
+                            System.out.println("--------------------------------");
+                            try (BufferedReader reader = new BufferedReader(new FileReader("pemlanTugas3/dataBuku.txt" ))){
+                                String line;
+                                while ((line = reader.readLine()) != null) {
+                                    System.out.println(line);
+                                }
+                                reader.close();
+                            } catch (IOException e){
+                                System.out.println("Error: " + e.getMessage());
+                            }
+                            break;
+                        default:
+                            System.out.println("> Menu tidak tersedia!");
                     }
+
                     break;
                 case 3:
                     System.out.println("> Terima Kasih!!");
