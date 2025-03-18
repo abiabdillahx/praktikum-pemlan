@@ -41,7 +41,7 @@ public class Buku{
     // Menampilkan informasi buku
     public static void infoBuku(){
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("pemlanTugas3/dataBuku.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("./dataBuku.txt"));
             String line;
             System.out.println("\nDaftar Judul Buku:");
             System.out.println("---------------------");
@@ -64,7 +64,7 @@ public class Buku{
     public static void infoBuku(String filename){
         System.out.println("\nDaftar Lengkap Buku");
         System.out.println("--------------------------------");
-        try (BufferedReader reader = new BufferedReader(new FileReader("pemlanTugas3/dataBuku.txt" ))){
+        try (BufferedReader reader = new BufferedReader(new FileReader("./dataBuku.txt" ))){
             String line;
             while ((line = reader.readLine()) != null) {
                 System.out.println(line);

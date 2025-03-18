@@ -11,7 +11,9 @@ Pada tahap ini, saya membuat sebuah class Buku yang memiliki atribut judul, peng
 kode : [Buku.java](./Buku.java)
 
 ### 2. Menampilkan Informasi Buku
-Pada tahap ini, saya membuat sebuah class Main yang memiliki method main untuk menampilkan informasi buku. Method ini akan menampilkan judul, pengarang, dan tahun terbit dari buku yang telah ditambahkan sebelumnya. Bagaimana? caranya dengan memanggil method yang akan dijelaskan pada [poin 3](#4-membaca-data-buku-dari-file) di bawah.
+Pada tahap ini, saya membuat sebuah class Main yang memiliki method main untuk menampilkan informasi buku. Method ini akan menampilkan judul, pengarang, dan tahun terbit dari buku yang telah ditambahkan sebelumnya. Bagaimana? caranya dengan memanggil method yang akan dijelaskan pada [poin 4](#4-membaca-data-buku-dari-file) di bawah.
+> [!WARNING]  
+> Pastikan run program ini di direcotry yang sama dengan **dataBuku.txt**
 
 ### 3. Menyimpan Data Buku ke File
 - Pada tahap ini, saya membuat sebuah sistem yang dapat menyimpan data buku ke dalam filenya. Sistem ini akan menulis data buku ke dalam file dengan format **"Judul Buku** oleh **Penulis (Tahun Terbit)**.
