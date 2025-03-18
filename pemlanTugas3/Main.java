@@ -35,7 +35,7 @@ public class Main {
                         System.out.print("Masukkan Tahun Terbit: ");
                         int tahun = sc.nextInt();
                         sc.nextLine();
-                        // Membuat objek baru dari input user dan dimasukkan ke
+                        // Membuat objek baru dari input user dan dimasukkan ke dataBuku.txt
                         Buku bukuBaru = new Buku(judul, penulis, tahun);
                         dataBuku[Buku.getJumlah()-1] = bukuBaru;
 
