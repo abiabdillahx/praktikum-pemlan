@@ -58,22 +58,11 @@ public class Main {
                             Buku.infoBuku();
                             break;
                         case 2: // MENAMPILKAN INFO LENGKAP
-                            System.out.println("\nJudul Buku: Penulis,Tahun Terbit");
-                            System.out.println("--------------------------------");
-                            try (BufferedReader reader = new BufferedReader(new FileReader("pemlanTugas3/dataBuku.txt" ))){
-                                String line;
-                                while ((line = reader.readLine()) != null) {
-                                    System.out.println(line);
-                                }
-                                reader.close();
-                            } catch (IOException e){
-                                System.out.println("Error: " + e.getMessage());
-                            }
+                            Buku.infoBuku("pemlanTugas3/dataBuku.txt");
                             break;
                         default:
                             System.out.println("> Menu tidak tersedia!");
                     }
-
                     break;
                 case 3:
                     System.out.println("> Terima Kasih!!");

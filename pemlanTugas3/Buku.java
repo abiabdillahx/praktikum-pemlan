@@ -34,7 +34,7 @@ public class Buku{
 
     // Menambah buku baru
     public String infoBuku(Buku buku) {
-        String data = "- " + buku.getJudul() + ": " + buku.getPenulis() + ", " + buku.getTahunTerbit() + "\n";
+        String data = "- " + buku.getJudul() + " oleh " + buku.getPenulis() + " (" + buku.getTahunTerbit() + ")" + "\n";
         return data;
     }
 
@@ -46,9 +46,9 @@ public class Buku{
             System.out.println("\nDaftar Judul Buku:");
             System.out.println("---------------------");
             while ((line = reader.readLine()) != null) {
-                // Untuk mengambil judul saja. Judul ada di antara ". " dan ":"
+                // Untuk mengambil judul saja. Judul ada di antara ". " dan "oleh"
                 int start = line.indexOf("- ") + 2;
-                int end = line.indexOf(":");
+                int end = line.indexOf(" oleh ");
                 if (start >= 2 && end > start) {
                     String judul = line.substring(start, end);
                     System.out.println("- " + judul);
@@ -59,6 +59,21 @@ public class Buku{
             System.out.println("Terjadi kesalahan saat membaca file.");
             e.printStackTrace();
         }
+    }
+
+    public static void infoBuku(String filename){
+        System.out.println("\nDaftar Lengkap Buku");
+        System.out.println("--------------------------------");
+        try (BufferedReader reader = new BufferedReader(new FileReader("pemlanTugas3/dataBuku.txt" ))){
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+            reader.close();
+        } catch (IOException e){
+            System.out.println("Error: " + e.getMessage());
+        }
+        
     }
 
     
