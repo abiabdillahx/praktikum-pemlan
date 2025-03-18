@@ -14,32 +14,33 @@ kode : [Buku.java](./Buku.java)
 Pada tahap ini, saya membuat sebuah class Main yang memiliki method main untuk menampilkan informasi buku. Method ini akan menampilkan judul, pengarang, dan tahun terbit dari buku yang telah ditambahkan sebelumnya. Bagaimana? caranya dengan memanggil method yang akan dijelaskan pada [poin 3](#4-membaca-data-buku-dari-file) di bawah.
 
 ### 3. Menyimpan Data Buku ke File
-> - Pada tahap ini, saya membuat sebuah sistem yang dapat menyimpan data buku ke dalam filenya. Sistem ini akan menulis data buku ke dalam file dengan format **"Judul Buku** oleh **Penulis (Tahun Terbit)**.
-> - Sistem ini saya letakkan di class Main
+- Pada tahap ini, saya membuat sebuah sistem yang dapat menyimpan data buku ke dalam filenya. Sistem ini akan menulis data buku ke dalam file dengan format **"Judul Buku** oleh **Penulis (Tahun Terbit)**.
+- Sistem ini saya letakkan di class Main
 ```java
 for (int i = 0; i < banyakBuku; i++) {
-                        System.out.print("Masukkan Judul Buku: ");
-                        String judul = sc.nextLine();
-                        System.out.print("Masukkan nama Penulis: ");
-                        String penulis = sc.nextLine();
-                        System.out.print("Masukkan Tahun Terbit: ");
-                        int tahun = sc.nextInt();
-                        sc.nextLine();
-                        // Membuat objek baru dari input user dan dimasukkan ke dataBuku.txt
-                        Buku bukuBaru = new Buku(judul, penulis, tahun);
-                        dataBuku[Buku.getJumlah()-1] = bukuBaru;
+    System.out.print("Masukkan Judul Buku: ");
+    String judul = sc.nextLine();
+    System.out.print("Masukkan nama Penulis: ");
+    String penulis = sc.nextLine();
+    System.out.print("Masukkan Tahun Terbit: ");
+    int tahun = sc.nextInt();
+    sc.nextLine();
+    // Membuat objek baru dari input user dan dimasukkan ke dataBuku.txt
+    Buku bukuBaru = new Buku(judul, penulis, tahun);
+    dataBuku[Buku.getJumlah()-1] = bukuBaru;
 
-                        try (BufferedWriter writer = new BufferedWriter(new FileWriter("pemlanTugas3/dataBuku.txt", true))) {
-                            writer.write(bukuBaru.infoBuku(bukuBaru));
-                            writer.close();
-                        } catch (Exception e) { 
-                            System.out.println("Error: " + e.getMessage());
-                        }
-                        System.out.println("Buku berhasil ditambahkan!");
-                    }
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter("pemlanTugas3/dataBuku.txt", true))) {
+        writer.write(bukuBaru.infoBuku(bukuBaru));
+        writer.close();
+    } catch (Exception e) { 
+        System.out.println("Error: " + e.getMessage());
+    }
+    System.out.println("Buku berhasil ditambahkan!");
+}
 ```
 ### 4. Membaca Data Buku dari File
-> - Pada tahap ini, saya membuat 2 versi method. Yaitu info secara singkat (judul saja) dan info lengkap. Dikarenakan format yang saya gunakan adalah **"- Judul oleh Penulis (Tahun Terbit)"**, maka saya menggunakan split untuk memisahkan judul, penulis, dan tahun terbit. Functionnya saya letakkan di Buku.java dan bersifat overload.
+- Pada tahap ini, saya membuat 2 versi method. Yaitu info secara singkat (judul saja) dan info lengkap. Dikarenakan format yang saya gunakan adalah **"- Judul oleh Penulis (Tahun Terbit)"**, maka saya menggunakan split untuk memisahkan judul, penulis, dan tahun terbit. Functionnya saya letakkan di Buku.java dan bersifat overload.
+- Sebelumnya, saya sudah membuat preloaded data di dalam dataBuku.txt untuk default.
 ```java
 public static void infoBuku(){
         try {
@@ -63,30 +64,38 @@ public static void infoBuku(){
         }
     }
 
-    public static void infoBuku(String filename){
-        System.out.println("\nDaftar Lengkap Buku");
-        System.out.println("--------------------------------");
-        try (BufferedReader reader = new BufferedReader(new FileReader("pemlanTugas3/dataBuku.txt" ))){
-            String line;
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
-            }
-            reader.close();
-        } catch (IOException e){
-            System.out.println("Error: " + e.getMessage());
+public static void infoBuku(String filename){
+    System.out.println("\nDaftar Lengkap Buku");
+    System.out.println("--------------------------------");
+    try (BufferedReader reader = new BufferedReader(new FileReader("pemlanTugas3/dataBuku.txt" ))){
+        String line;
+        while ((line = reader.readLine()) != null) {
+            System.out.println(line);
         }
-        
+        reader.close();
+    } catch (IOException e){
+        System.out.println("Error: " + e.getMessage());
     }
+    
+}
 ```
 ### 5. Interaksi dengan Program
-> - Untuk menambah interaktivitas antara program dengan user, saya menggunakan Scanner sebagai pembaca input user.
-> - Seluruh program di atas sudah dilengkapi dengan input user. User dapat memilih menu yang diinginkan dan program akan menampilkan hasilnya.
+- Untuk menambah interaktivitas antara program dengan user, saya menggunakan Scanner sebagai pembaca input user.
+- Seluruh program di atas sudah dilengkapi dengan input user. User dapat memilih menu yang diinginkan dan program akan menampilkan hasilnya.
 > - *ditambah juga beberapa batasan dan pengecekan untuk menghindari kesalahan input user.*
 
 
 ## Output program
 ### 1. Menu Utama
+![image](https://github.com/user-attachments/assets/8c906787-da97-4673-b15e-4836954aec29)
+
 ### 2. Tambah Buku
+![image](https://github.com/user-attachments/assets/7f0cf9ef-68b4-4dfa-a371-8c7ebd33fe64)
+
 ### 3. Daftar Judul Buku
+![image](https://github.com/user-attachments/assets/dd6df0d3-8c17-4f13-bc00-6a6ec687dacf)
+
 ### 4. Daftar Lengkap Buku
+![image](https://github.com/user-attachments/assets/77f039b9-2b14-4fc6-8826-ff20926b5287)
+
 
