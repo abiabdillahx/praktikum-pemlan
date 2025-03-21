@@ -39,7 +39,7 @@ public class Main {
                         Buku bukuBaru = new Buku(judul, penulis, tahun);
                         dataBuku[Buku.getJumlah()-1] = bukuBaru;
 
-                        try (BufferedWriter writer = new BufferedWriter(new FileWriter("pemlanTugas3/dataBuku.txt", true))) {
+                        try (BufferedWriter writer = new BufferedWriter(new FileWriter("./dataBuku.txt", true))) {
                             writer.write(bukuBaru.infoBuku(bukuBaru));
                             writer.close();
                         } catch (Exception e) { 
