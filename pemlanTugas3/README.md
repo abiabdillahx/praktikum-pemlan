@@ -3,7 +3,7 @@
 
 **code:**
 1. [Main.java](./Main.java)
-2. [Buku.java](./.java)
+2. [Buku.java](./Buku.java)
 
 ## Dokumentasi
 ### 1. Membuat Kelas Buku

@@ -1,38 +1,66 @@
 public class Akun {
     private String noPelanggan;
     private String nama;
-    private int saldo;
+    private double saldo;
     private final int pin;
-    private Akun[] dataAkun = {
-        new Akun("3800001111", "Dung dung", 8000, 111000),
-        new Akun("3800001112", "Ahmad", 500000, 001100),
-        new Akun("5600002222", "Ilham", 300000, 696969),
-        new Akun("5600002223", "Buzzer", 1500000, 123789),
-        new Akun("7200003333", "Nigga", 2000000, 989898)
-    }
-
-    final int silver = 38;
-    final int gold = 56;
-    final int platinum = 74;
+    private boolean isBlocked;
+    
 
     public Akun(String noPelanggan, String nama, int saldo, int pin){
         this.noPelanggan = noPelanggan;
         this.nama = nama;
         this.saldo = saldo;
         this.pin = pin;
+        this.isBlocked = false;
     }
 
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+    public void setBlokir(boolean isBlocked){
+        this.isBlocked = isBlocked;
+    }
+
+    // Getter method
+    public boolean getIsBlocked(){
+        return this.isBlocked;
+    }
     public String getNoPelanggan(){
         return noPelanggan;
     }
-    public int getSaldo(){
+    public double getSaldo(){
         return saldo;
     }
     public String getNama(){
         return nama;
     }
     public int getPin(){
-        return pin;
+        return this.pin;
+    }
+
+    public String getLevel(String noPel) {
+        String kodeAwal = noPel.substring(0, 2);
+        switch (kodeAwal) {
+            case "38":
+                return "Silver";
+            case "56":
+                return "Gold";
+            case "74":
+                return "Platinum";
+            default:
+                return "Unknown";
+        }
+    }
+
+    public void infoAkun(String noPel, int pin){
+        if (noPel.equals(noPelanggan) && pin == this.pin) {
+            System.out.println("--- Data Akun ---");
+            System.out.printf("%-15s : %s", "Nama", nama);
+            System.out.printf("\n%-15s : %s", "No Pelanggan", noPelanggan);
+            System.out.printf("\n%-15s : Rp %,.2f", "Saldo", saldo);
+            System.out.printf("\n%-15s : %s\n", "Level", getLevel(noPelanggan));
+        }
+        
     }
 
 }
