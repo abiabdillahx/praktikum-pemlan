@@ -34,7 +34,7 @@ public String getLevel(String noPel) {
     }
 }
 ```
-Nantinya, return value dari getLevel() akan digunakan untuk menentukan level pelanggan dan menentukan cashback yang didapat. 
+Nantinya, return value dari getLevel() akan digunakan untuk menentukan level pelanggan dan menentukan cashback yang didapat. **Cashback kemudian dimasukkan kembali ke saldo rekening**.
 **`Transaksi.java`:**
 ```java
     public static double calcCashback(String level, double belanja){
@@ -70,7 +70,7 @@ Pada tahap ini, saya membuat validasi untuk saldo pelanggan. Jika saldo kurang s
     }
 ```
 
-### 4. Sistem transaksi terbataas pada top up dan pembelian
+### 4. Sistem transaksi terbatas pada top up dan pembelian
 Selanjutnya, saya membuat method untuk melakukan top up dan pembelian. Pada method ini, setelah semua validasi saldo dan autorisasi akun menggunakan PIN, maka transaksi akan berhasil dilakukan.
 Saya juga mengantisipasi jika user melakukan transaksi dengan total belanja kurang dari 0, maka akan menampilkan pesan error.
 > [!NOTE]
@@ -89,7 +89,23 @@ Saya membuat 4 buah akun pelanggan sebagai contoh penggunaan program. Masing-mas
 > 1. Pelanggan Silver dengan saldo di bawah 10rb mencoba membeli barang
 > 2. Top up saldo
 > 3. Pelanggan Gold dengan saldo di atas 10rb mencoba membeli barang dgn harga lebih dari 1jt
-> 4. Pembeli salah input PIN sebanyak 3 kali
-> 5. Pelanggan Platinum dengan saldo di atas 10rb mencoba membeli barang dgn harga lebih dari 1jt
+> 4. Pelanggan Platinum dengan saldo di atas 10rb mencoba membeli barang dgn harga lebih dari 1jt
+> 5. Pembeli salah input PIN sebanyak 3 kali
 
-### 1. Top up saldo akun
+### 1. Pelanggan silver dengan saldo < 10rb membeli barang dan top up saldo
+![image](https://github.com/user-attachments/assets/a9fd88b8-e404-4780-9849-1254ecd9b577)
+### 2. Setelah top up, kita juga dapat mencoba membeli lagi
+![image](https://github.com/user-attachments/assets/0faa7a1c-3c25-4656-aa22-1606da7d5ff9)
+
+### 3. Pelanggan Gold membeli barang dgn harga > 1jt
+![image](https://github.com/user-attachments/assets/25337867-fdc4-4592-a5c4-9afba83f95d8)
+
+Cashback yang didapat adalah 7%
+
+### 4. Pelanggan Platinum membeli barang dgn harga > 1jt
+![image](https://github.com/user-attachments/assets/53ef664b-4e1a-422f-b848-c17f93e841bc)
+
+### 5. Pembeli salah input PIN sebanyak 3 kali, lalu mencoba top up/transaksi
+![image](https://github.com/user-attachments/assets/d602d328-4822-4cca-a40d-24c263175556)
+
+
