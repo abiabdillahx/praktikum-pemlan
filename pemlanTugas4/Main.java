@@ -4,8 +4,8 @@ public class Main {
     private static Akun[] dataAkun = {
         new Akun("3800001111", "Dung dung", 8000, 111000), // --> sebagai contoh kasus jika saldo dibawah 10rb
         new Akun("3800001112", "Ahmad", 400000, 101010), // --> sebagai contoh akun silver
-        new Akun("5600002222", "Mulyono", 700000, 696969), // --> sebagai contoh akun gold
-        new Akun("7400003333", "Niggus", 2000000, 989898) // --> sebagai contoh akun platinum
+        new Akun("5600002222", "Mulyono", 2700000, 696969), // --> sebagai contoh akun gold
+        new Akun("7400003333", "Niggus", 4000000, 989898) // --> sebagai contoh akun platinum
     };
 
     public static void main(String[] args) {
