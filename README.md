@@ -7,4 +7,5 @@
 | 1   | Class dan Object                | 2025-03-12 | [Here](./pemlanTugas1/) |
 | 2   | Constructor dan Instance Method | 2025-03-15 | [Here](./pemlanTugas2/) |
 | 3   | Overload dan Overloading Method | 2025-03-20 | [Here](./pemlanTugas3/) |
+| 4   | Encapsulation                   | 2025-03-28 | [Here](./pemlanTugas4/) |
 
