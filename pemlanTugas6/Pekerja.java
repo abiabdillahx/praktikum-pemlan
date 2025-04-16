@@ -36,6 +36,7 @@ public class Pekerja extends Manusia {
     }
 
     // methods
+    // logic bonus yg didapat
     public double getBonus(){
         final int BONUS_PER_ANAK = 20;
         double bonus = 0;

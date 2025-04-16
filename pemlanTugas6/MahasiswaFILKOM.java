@@ -22,6 +22,7 @@ public class MahasiswaFILKOM extends Manusia {
         return ipk;
     }
 
+    // status mahasiswa (angkatan + prodi)
     public String getStatus(){
         String angkatan = "20" + getNim().substring(0, 2);
         String kodeProdi = getNim().substring(5, 7);
@@ -36,6 +37,7 @@ public class MahasiswaFILKOM extends Manusia {
         };
         return prodi + ", " + angkatan;
     }
+    // logic beasiswa yg didapat tiap mahasiswa
     public double getBeasiswa(){
         double beasiswa;
         if (getIpk() >= 3.5 && getIpk() <= 4.0) {
