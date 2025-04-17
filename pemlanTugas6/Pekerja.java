@@ -34,6 +34,11 @@ public class Pekerja extends Manusia {
     public int getJumlahAnak(){
         return jumlahAnak;
     }
+    @Override
+    public double getPendapatan(){
+        double pendapatan = gaji + getBonus();
+        return pendapatan;
+    }
 
     // methods
     // logic bonus yg didapat
@@ -57,7 +62,7 @@ public class Pekerja extends Manusia {
         String nama = getNama();
         String nik = getNik();
         String jenisKelamin = getJenisKelamin()? "Laki-laki" : "Perempuan";
-        double pendapatan = gaji + getBonus();
+        
         int tanggal = tahunMasuk.getDayOfMonth(); 
         int bulan = tahunMasuk.getMonthValue();
         int tahun = tahunMasuk.getYear();
@@ -70,7 +75,7 @@ public class Pekerja extends Manusia {
             "Tahun Masuk    : %d %d %d%n" +
             "Jumlah Anak    : %d%n" +
             "Gaji           : %.1f",
-            nama, nik, jenisKelamin, pendapatan, tanggal, bulan, tahun, jumlahAnak, gaji
+            nama, nik, jenisKelamin, getPendapatan(), tanggal, bulan, tahun, jumlahAnak, gaji
             );
         return pekerja;
     }

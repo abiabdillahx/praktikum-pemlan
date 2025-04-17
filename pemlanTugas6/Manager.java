@@ -12,6 +12,11 @@ public class Manager extends Pekerja {
     public String getDepartemen(){
         return departemen;
     }
+    @Override
+    public double getPendapatan(){
+        double tambahan = super.getGaji() * 0.10;
+        return super.getPendapatan() + tambahan;
+    }
 
     @Override
     public String toString(){
