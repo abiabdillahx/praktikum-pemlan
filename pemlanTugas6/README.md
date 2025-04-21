@@ -33,5 +33,9 @@ Atribut khusus yang ada pada class Pekerja adalah:
 Class Manager merupakan class turunan dari class Pekerja yang memiliki atribut dan method khusus. Pada class ini, atribut yang ditambah hanya `departemen`.
 
 ## Screenshot Output
+![Screenshot 2025-04-21 155841](https://github.com/user-attachments/assets/a50cf00e-0d14-4906-a6f2-604d7891fef8)
+![Screenshot 2025-04-21 155858](https://github.com/user-attachments/assets/b283ae6d-926f-4927-9180-f1e3ab8021b0)
+![Screenshot 2025-04-21 155909](https://github.com/user-attachments/assets/cd9c4e45-72f9-4a4c-943a-776cb9f7bf79)
+
 
 
