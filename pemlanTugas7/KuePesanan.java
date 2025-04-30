@@ -14,6 +14,8 @@ public class KuePesanan extends Kue {
     public double hitungHarga() {
         return getHarga() * berat;
     }
+
+    // // override method toString khusus class KuePesanan
     @Override
     public String toString(){
         String pesanan = String.format("%-15s %12s", getNama(), "Rp "+hitungHarga());

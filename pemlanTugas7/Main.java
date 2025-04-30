@@ -7,6 +7,7 @@ public class Main {
         double hargaJadi = 0;
         Kue[] listKue = new Kue[20];
 
+        // array dengan isi berbagai subclass
         listKue[0] = new KueJadi("Brownies", 20000, 2);
         listKue[1] = new KueJadi("Kue Cubit", 15000, 3);
         listKue[2] = new KuePesanan("Kue Tart", 50000, 2);
@@ -35,7 +36,8 @@ public class Main {
 
         System.out.printf("%-17s %15s\n", " Nama Kue", "Harga");
         System.out.println("-----------------------------");
-        int index = 1;
+        int index = 1; // indexing nomor urut
+        // for-each loop buat print nama dan harga kue
         for (Kue kue : listKue) {
             System.out.println(index + ". " + kue);
             index++;
@@ -48,21 +50,25 @@ public class Main {
                 totalJumlah += kueJadi.getJumlah();
             }
 
+            // selection untuk mencari kue termahal (harga akhir)
             if (kue.hitungHarga() > maxHarga){
                 maxHarga = kue.hitungHarga();
                 kueTermahal = kue;
             }
 
         }
+        // total harga
         System.out.println("--------------------------");
         System.out.printf("%-15s %10s", "Total Harga Kue: ", "Rp " + totalHarga);
         System.out.println("\n");
 
+        // total berat dan jumlah  + harga tiap subclass
         System.out.println("Total Berat Kue Pesanan: " + totalBerat + " kg");
         System.out.println("Harga Kue Pesanan: " + hargaPesanan);
         System.out.println("Total Jumlah Kue Jadi: " + totalJumlah + " pcs");
         System.out.println("Harga Kue Jadi: " + hargaJadi);
         System.out.println();
+        // kue termahal
         System.out.printf("%-15s %10s\n", "Kue termahal: ", kueTermahal.getNama());
         System.out.printf("%-15s %10s\n","Harganya: ", kueTermahal.hitungHarga());
 

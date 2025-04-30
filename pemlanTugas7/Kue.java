@@ -16,6 +16,8 @@ public abstract class Kue {
         return harga;
     }
 
+
+    // override method toString default
     @Override
     public String toString() {
         String kue = String.format("%-15s %10s", nama, harga);

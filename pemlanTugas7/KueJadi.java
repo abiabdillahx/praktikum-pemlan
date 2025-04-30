@@ -16,6 +16,7 @@ public class KueJadi extends Kue{
         return getHarga() * jumlah * 2;
     }
 
+    // override method toString khusus class KueJadi
     @Override
     public String toString(){
         String jadi = String.format("%-15s %12s", getNama(), "Rp "+hitungHarga());
