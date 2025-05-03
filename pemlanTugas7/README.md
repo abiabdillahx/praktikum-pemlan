@@ -57,6 +57,7 @@ Implementasinya dapat dilihat langsung di file [Main.java](./Main.java)
 Saya membuat array berisi 20 kue random dengan loop for-each untuk listing kue apa saja yang dibeli dan juga harganya.
 
 ## Output program
-[gambar screenshot]
+![image](https://github.com/user-attachments/assets/2bb863c6-acdb-4b10-b776-a18059c53656)
+
 
 
