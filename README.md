@@ -9,4 +9,5 @@
 | 3   | Overload dan Overloading Method   | 2025-03-20 | [Here](./pemlanTugas3/) |
 | 4   | Encapsulation                     | 2025-03-28 | [Here](./pemlanTugas4/) |
 | 5   | Static Method dan Konstanta Final | 2025-04-10 | [Here](./pemlanTugas5/) |
-
+| 6   | Inheritance                       | 2025-04-17 | [Here](./pemlanTugas6/) |
+| 7   | Polymorphism                      | 2025-05-01 | [Here](./pemlanTugas7/) |
