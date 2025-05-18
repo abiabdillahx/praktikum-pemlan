@@ -30,7 +30,8 @@ if (file.exists() && file.isFile()) {
 ```
 Jika ukuran sebuah file kurang dari 1 MB, maka ukuran file akan ditampilkan dalam satuan KB, jika lebih dari 1 MB maka akan ditampilkan dalam satuan MB.
 ##### Ini contoh penggunaannya.
-[gambarnya]
+![Screenshot 2025-05-18 133605](https://github.com/user-attachments/assets/c07d67bb-2d3d-4035-a180-11be58bb97e9)
+
 
 ### 3. Buat Program untuk listing semua file di direktori yang diinputkan user
 Pada program ini, saya menggunakan kode berikut untuk listing semua file di direktori yang diinputkan user. Setelah user menginputkan path direktori yang dituju, program akan menjalankan logika ini dan menampilkan semua file yang ada di direktori tersebut dengan for-each. Kode program : **[ListingDir.java](./ListingDir.java)**.
@@ -54,7 +55,8 @@ if (directory.exists() && directory.isDirectory()) {
 ```
 
 #### Ini contoh penggunaannya
-[gambar ss]
+![Screenshot 2025-05-18 133828](https://github.com/user-attachments/assets/3517cafd-d237-4dc0-8ec8-d1988ab1c155)
+
 
 ### 4. Buat kode program untuk menghapus suatu direktori beserta semua file yang ada di dalamnya.
 Diasumsikan, bahwa di dalam direktori hanya ada file saja dan tidak ada subdirektori. Untuk itu, saya sudah membuat folder dummy untuk mencoba program : **[ContohDir/](./ContohDir/)**.
@@ -62,8 +64,9 @@ Diasumsikan, bahwa di dalam direktori hanya ada file saja dan tidak ada subdirek
 
 Intinya, program ini menggunakan function `delete()` untuk menghapus direktori beserta isinya. Jika direktori tidak ditemukan, maka program akan menampilkan pesan error. Jika direktori berhasil dihapus, maka program akan menampilkan pesan berhasil. Kode programnya bisa dilihat di sini: **[HapusDirektori.java](./HapusDirektori.java)**.
 
-Program akan menghapus semua file di direktori tersebut dan menghapus direktori itu sendiri. COntoh :
-[gambar ss]
+Program akan menghapus semua file di direktori tersebut dan menghapus direktori itu sendiri. Contoh :
+![Screenshot 2025-05-18 135218](https://github.com/user-attachments/assets/83f648bd-538b-4288-ac07-70524c330592)
+
 
 ### 5. Apakah yang salah dengan statement berikut? Berikan penjelasan.
 ```java 
