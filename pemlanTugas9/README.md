@@ -102,3 +102,7 @@ try {
 }
 
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4aec4ca (first commit pemlanTugas10)
