@@ -43,6 +43,22 @@ public class Main {
         sortByTinggi(timA, false);
         timA.forEach(System.out::println);
 
+        System.out.println("=== Tim A - Berat Ascending ===");
+        sortByBerat(timA, true);
+        timA.forEach(System.out::println);
+
+        System.out.println("\n=== Tim A - Berat Descending ===");
+        sortByBerat(timA, false);
+        timA.forEach(System.out::println);
+
+        System.out.println("\n=== Tim B - Tinggi Ascending ===");
+        sortByTinggi(timB, true);
+        timB.forEach(System.out::println);
+
+        System.out.println("\n=== Tim B - Tinggi Descending ===");
+        sortByTinggi(timB, false);
+        timB.forEach(System.out::println);
+
         System.out.println("\n=== Tim B - Berat Ascending ===");
         sortByBerat(timB, true);
         timB.forEach(System.out::println);
