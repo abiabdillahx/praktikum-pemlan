@@ -4,29 +4,29 @@ public class Main {
     public static void main(String[] args) {
         // 1. Data Pemain
         List<Pemain> timA = new ArrayList<>(Arrays.asList(
-            new Pemain(168, 50),
-            new Pemain(170, 60),
-            new Pemain(165, 56),
-            new Pemain(168, 55),
-            new Pemain(172, 60),
-            new Pemain(170, 70),
-            new Pemain(169, 66),
-            new Pemain(165, 56),
-            new Pemain(171, 72),
-            new Pemain(166, 56)
+            new Pemain(1, 168, 50),
+            new Pemain(2, 170, 60),
+            new Pemain(3, 165, 56),
+            new Pemain(4, 168, 55),
+            new Pemain(5, 172, 60),
+            new Pemain(6, 170, 70),
+            new Pemain(7, 169, 66),
+            new Pemain(8, 165, 56),
+            new Pemain(9, 171, 72),
+            new Pemain(10, 166, 56)
         ));
 
         List<Pemain> timB = new ArrayList<>(Arrays.asList(
-            new Pemain(170, 66),
-            new Pemain(167, 60),
-            new Pemain(165, 59),
-            new Pemain(166, 58),
-            new Pemain(168, 58),
-            new Pemain(175, 71),
-            new Pemain(172, 68),
-            new Pemain(171, 68),
-            new Pemain(168, 65),
-            new Pemain(169, 60)
+            new Pemain(1, 170, 66),
+            new Pemain(2, 167, 60),
+            new Pemain(3, 165, 59),
+            new Pemain(4, 166, 58),
+            new Pemain(5, 168, 58),
+            new Pemain(6, 175, 71),
+            new Pemain(7, 172, 68),
+            new Pemain(8, 171, 68),
+            new Pemain(9, 168, 65),
+            new Pemain(10, 169, 60)
         ));
 
         List<Pemain> timC = new ArrayList<>(); // Untuk copy Tim B
